@@ -33,7 +33,6 @@ export class NavbarComponent implements OnInit {
   .subscribe(
     (event: NavigationEvent) => {
       if(event instanceof NavigationStart) {
-        console.log(event.url);
         if (event.url === '/orden-servicio') {
           this.componente = '/ordenes de servicio'.toLocaleUpperCase();
         }

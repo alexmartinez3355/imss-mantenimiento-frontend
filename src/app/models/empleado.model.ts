@@ -24,6 +24,7 @@ export class EmpleadoModel {
         this.fechaNacimiento = fechaNacimiento;
         this.matricula = matricula;
         this.numPlaza = numPlaza;
+        this.puesto = puesto;
     }
 
     static instEmpleadoLoginRespuesta(obj: EmpleadoModel): any {
@@ -53,6 +54,21 @@ export class EmpleadoModel {
             null,
             null,
             null
+        );
+    }
+
+    static instCargarEmpleados(obj: EmpleadoModel): any {
+        return new EmpleadoModel(
+            obj.idEmpleado,
+            obj.nombreEmpleado,
+            obj.apellidoPaterno,
+            obj.apellidoMaterno,
+            obj.sexo,
+            obj.edad,
+            obj.fechaNacimiento,
+            obj.matricula,
+            obj.numPlaza,
+            PuestoEmpleadoModel.instPuestoNuevoEmpleado(obj.puesto)
         );
     }
 

@@ -1,1 +1,56 @@
-<p>empleados works!</p>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="empleadoForm">
+                <div class="row mb-3">
+                        <div class="col mb-3  col-sm-9">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Ingresa Nombre o Matricula">
+                                <div class="input-group-append">
+                                    <button class="btn btn-fondo btn-contorno" type="button" id="button-addon2">
+                                        <fa-icon [icon]="IBuscar"></fa-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3 col-sm-3">
+                            <div class="input-group">
+                                <button class="btn btn-outline-info col-sm-12" type="button">Agregar
+                                    empleado</button>
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                    <table class="table table-sm table-striped table-hover">
+                        <thead class="color-cabecera-tabla">
+                            <tr>
+                                <th scope="col">Matricula</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Puesto</th>
+                                <th scope="col">Editar</th>
+                                <th scope="col">Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let empleado of listaEmpleados">
+                                <th scope="row">{{empleado.matricula}}</th>
+                                <td>{{empleado.getNombreCompleto()}}</td>
+                                <td>{{empleado.puesto.nombrePuesto}}</td>
+                                <td>
+                                    <button class="btn btn-outline-info text-center btn-sm">
+                                        <fa-icon [icon]="IEditar"></fa-icon>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline-danger text-center btn-sm">
+                                        <fa-icon [icon]="IEliminar"></fa-icon>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

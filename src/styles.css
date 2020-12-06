@@ -27,3 +27,12 @@
     font-family: 'A-Space-Bold';
     src: url(assets/fonts/A-Space-Bold.otf);
 }
+
+.scroll-personalizado::-webkit-scrollbar {
+    width: 10px;
+    background: #AEEBD8;
+}
+
+.scroll-personalizado::-webkit-scrollbar-thumb {
+    background: #144D38;
+}
