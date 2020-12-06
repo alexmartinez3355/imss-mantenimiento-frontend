@@ -1,0 +1,37 @@
+<div class="sidebar-color" id="sidebar-container" *ngIf="generalS.usuarioActivo.idUsuario !== null">
+<!-- <div class="sidebar-color" id="sidebar-container"> -->
+    <div class="logo text-center">
+        <a routerLink="inicio">
+            <img class="imagen" src="../../../assets/images/IMSS.svg">
+        </a>
+    </div>
+    <div class="menu">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" routerLinkActive="active">
+                <a routerLink="orden-servicio" class="d-block p-3 text-light">
+                    <fa-icon [icon]="IOrdenServicio" size="1x" class="mr-2"></fa-icon>Ordenes de servicio
+                </a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" *ngIf="generalS.usuarioActivo.rol === 'admin'">
+                <a routerLink="empleados" class="d-block p-3 text-light">
+                    <fa-icon [icon]="IEmpleados" size="1x" class="mr-2"></fa-icon>Empleados
+                </a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" *ngIf="generalS.usuarioActivo.rol === 'admin'">
+                <a routerLink="departamentos" class="d-block p-3 text-light">
+                    <fa-icon [icon]="IDepartamentos" size="1x" class="mr-2"></fa-icon>Departamentos
+                </a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a routerLink="configuracion" class="d-block p-3 text-light">
+                    <fa-icon [icon]="IConfiguracion" size="1x" class="mr-2"></fa-icon>Configuracion
+                </a>
+            </li>
+            <li class="nav-item alinear-boton" routerLinkActive="active">
+                <a type="button" class="d-block p-3 text-light" (click)="cerrarSesion()">
+                    <fa-icon [icon]="ICerrarSesion" size="1x" class="mr-2"></fa-icon>Cerrar sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

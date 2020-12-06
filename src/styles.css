@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+/* Fuentes personalizadas (AL finalizar el proyecto se descartaran las fuentes que no se usen) */
+
+/* Kickrush */
+@font-face{
+    font-family: 'kickrush';
+    src: url(assets/fonts/kickrush.ttf);
+}
+
+/* Roboto */
+@font-face{
+    font-family: 'Roboto';
+    src: url(assets/fonts/Roboto.ttf);
+}
+
+@font-face{
+    font-family: 'Roboto-BoldCondensed';
+    src: url(assets/fonts/Roboto-BoldCondensed.ttf);
+}
+
+/* A-Space */
+@font-face{
+    font-family: 'A-Space';
+    src: url(assets/fonts/A-Space.otf);
+}
+
+@font-face{
+    font-family: 'A-Space-Bold';
+    src: url(assets/fonts/A-Space-Bold.otf);
+}

@@ -1,0 +1,32 @@
+<span class="titulo-login">Sistema Administrador de Mantenimiento</span>
+<div class="box">
+    <div class="card sombra-contorno">
+        <div class="card-body">
+            <h3 class="text-center titulo-iniciar-sesion">INICIA SESIÓN</h3>
+            <form [formGroup]="loginForm" (ngSubmit)="iniciarSesion()">
+                <span class="form-text text-danger" *ngIf="usuarioNoValido">Ingresa un usuario valido</span>
+                <div class="input-group mb-3 input-size">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-bg-icon">
+                            <fa-icon [icon]="usuarioI" size="1x"></fa-icon>
+                        </span>
+                    </div>
+                    <input class="form-control focus-color" type="text" formControlName="usuario" placeholder="Usuario" [class.is-invalid]="usuarioNoValido" [class.is-valid]="usuarioValido">
+                </div>
+                <span class="form-text text-danger" *ngIf="passNoValido">Ingresa una contraseña valida</span>
+                <div class="input-group input-size">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-bg-icon">
+                            <fa-icon [icon]="passI" size="1x"></fa-icon>
+                        </span>
+                    </div>
+                    <input class="form-control focus-color" type="password" formControlName="passUsuario" placeholder="Contraseña" [class.is-invalid]="passNoValido" [class.is-valid]="passValido">
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-outline-success btn-fondo btn-sm btn-size" type="submit">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

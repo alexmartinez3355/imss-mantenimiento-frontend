@@ -1,0 +1,27 @@
+a:hover {
+    text-decoration: none;
+}
+
+.sidebar-color {background-color: #144D38;}
+
+#sidebar-container {
+    min-height: 100vh;
+}
+
+#sidebar-container .logo {
+    padding: .875rem 1.25rem;
+}
+
+#sidebar-container .menu {
+    width: 13rem;
+    /* height: 100vh; */
+}
+
+.imagen {
+    height: 6rem;
+    width: 6rem;
+}
+
+.alinear-boton {
+    vertical-align: baseline;
+}
