@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 90%;
+}
+
+input:focus, .btn-contorno:focus, .select-contorno:focus{
+    border-color: #28996F;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px #28996F;
+    outline: 0 none;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #28996F;
+    background-color: #28996F;
+}
+
+.contenedor-botones {
+    display: flex;
+    /* flex-direction: column; */
+    margin-bottom: 1em;
+    justify-content: space-around;
+    /* align-items: center; */
+}

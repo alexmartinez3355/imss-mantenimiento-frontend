@@ -1,3 +1,4 @@
+import { PuestoEmpleadoModel } from './puesto-empleado.model';
 import { EmpleadoModel } from './empleado.model';
 export class UsuarioModel {
     idUsuario?: number;
@@ -34,13 +35,13 @@ export class UsuarioModel {
         );
     }
 
-    static instUsuarioNuevo(obj: UsuarioModel): any {
+    static instUsuarioNuevo(obj: UsuarioModel, puesto: PuestoEmpleadoModel, empleado: EmpleadoModel): any {
         return new UsuarioModel(
             null,
             obj.usuario,
             obj.passUsuario,
             obj.rol,
-            obj.empleado
+            EmpleadoModel.instEmpleadoNuevo(empleado, puesto)
         );
     }
 }

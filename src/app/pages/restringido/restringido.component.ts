@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faAngry } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-restringido',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./restringido.component.css']
 })
 export class RestringidoComponent implements OnInit {
+
+  IEnojado = faAngry;
 
   constructor() { }
 

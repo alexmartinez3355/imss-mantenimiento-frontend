@@ -1,0 +1,62 @@
+<div class="row container animated fadeIn">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="empleadoForm" (ngSubmit)="actualizar()">
+                <div class="row mb-4">
+                    <div class="col-sm-4">
+                        <input class="form-control" type="text" placeholder="Nombre de usuario" formControlName="nombreEmpleado" data-toggle="tooltip" data-placement="top" title="Nombre">
+                    </div>
+
+                    <div class="col-sm-4">
+                        <input class="form-control" type="text" placeholder="Apellido Paterno" formControlName="apellidoPaterno" data-toggle="tooltip" data-placement="top" title="Apellido Paterno">
+                    </div>
+
+                    <div class="col-sm-4">
+                        <input class="form-control" type="text" placeholder="Apellido Materno" formControlName="apellidoMaterno" data-toggle="tooltip" data-placement="top" title="Apellido Materno">
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-sm-4">
+                        <input class="form-control" type="number" placeholder="Edad" formControlName="edad" data-toggle="tooltip" data-placement="top" title="Edad">
+                    </div>
+
+                    <div class="col-sm-4">
+                        <input class="form-control" type="date" formControlName="fechaNacimiento">
+                    </div>
+
+                    <div class="col-sm-4">
+                        <select class="custom-select select-contorno" formControlName="sexo" data-toggle="tooltip" data-placement="top" title="Sexo">
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                            <option>Sin especificar</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-sm-4">
+                        <input class="form-control" type="text" placeholder="Matricula" formControlName="matricula" data-toggle="tooltip" data-placement="top" title="Matricula">
+                    </div>
+                    <div class="col-sm-4">
+                        <input class="form-control" type="text" placeholder="Numero de plaza" formControlName="numPlaza" data-toggle="tooltip" data-placement="top" title="Número de plaza">
+                    </div>
+                    <div class="col-sm-4">
+                        <select class="custom-select select-contorno" formControlName="puesto" data-toggle="tooltip" data-placement="top" title="Puesto">
+                            <option>{{puesto}}</option>
+                            <option *ngFor="let p of listaPuestos">{{p.nombrePuesto}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <button class="btn btn-outline-primary" type="submit">Actualizar</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-danger" type="button" (click)="cancelar()">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

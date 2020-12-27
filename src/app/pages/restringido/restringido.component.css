@@ -1,0 +1,21 @@
+.error-titulo {
+    font-family: 'Robot_Font';
+    font-size: 100px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-icono{
+    color: red;
+}
+
+.error-texto {
+    font-family: 'A-Space';
+    font-size: 27px;
+}

@@ -1,3 +1,5 @@
+import { EditarEmpleadoComponent } from './pages/empleados/editar-empleado/editar-empleado.component';
+import { NuevoEmpleadoComponent } from './pages/empleados/nuevo-empleado/nuevo-empleado.component';
 import { RestringidoComponent } from './pages/restringido/restringido.component';
 import { ConfiguracionComponent } from './pages/configuracion/configuracion.component';
 import { DepartamentosComponent } from './pages/departamentos/departamentos.component';
@@ -32,6 +34,12 @@ const routes: Routes = [
   },
   {
     path: 'restringido', component: RestringidoComponent
+  },
+  {
+    path: 'empleados/nuevo-empleado', component: NuevoEmpleadoComponent
+  },
+  {
+    path: 'empleados/editar-empleado/:id_empleado', component: EditarEmpleadoComponent
   }
 ];
 

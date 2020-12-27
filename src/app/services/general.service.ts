@@ -55,7 +55,7 @@ export class GeneralService {
   /* Validar restricción de modulos */
   restringirEmpleado(): void {
     if (this.usuarioActivo !== undefined) {
-      if (this.router.isActive('empleados', true) || this.router.isActive('departamentos', true)) {
+      if (this.router.isActive('empleados', true) || this.router.isActive('empleados/nuevo-empleado', true) || this.router.isActive('departamentos', true)) {
         if (this.usuarioActivo.rol !== 'admin') {
           this.router.navigateByUrl('restringido');
         }

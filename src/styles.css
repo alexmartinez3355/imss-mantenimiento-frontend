@@ -28,6 +28,12 @@
     src: url(assets/fonts/A-Space-Bold.otf);
 }
 
+/* Robot_Font */
+@font-face{
+    font-family: 'Robot_Font';
+    src: url(assets/fonts/Robot_Font.otf);
+}
+
 .scroll-personalizado::-webkit-scrollbar {
     width: 10px;
     background: #AEEBD8;
@@ -35,4 +41,33 @@
 
 .scroll-personalizado::-webkit-scrollbar-thumb {
     background: #144D38;
+}
+
+/* Animaciones */
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
 }

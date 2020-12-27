@@ -72,18 +72,18 @@ export class EmpleadoModel {
         );
     }
 
-    static instEmpleadoNuevo(obj: EmpleadoModel): any {
+    static instEmpleadoNuevo(empleado: EmpleadoModel, puesto: PuestoEmpleadoModel): any {
         return new EmpleadoModel(
             null,
-            obj.nombreEmpleado,
-            obj.apellidoPaterno,
-            obj.apellidoMaterno,
-            obj.sexo,
-            obj.edad,
-            obj.fechaNacimiento,
-            obj.matricula,
-            obj.numPlaza,
-            PuestoEmpleadoModel.instPuestoNuevoEmpleado(obj.puesto)
+            empleado.nombreEmpleado,
+            empleado.apellidoPaterno,
+            empleado.apellidoMaterno,
+            empleado.sexo,
+            empleado.edad,
+            empleado.fechaNacimiento,
+            empleado.matricula,
+            empleado.numPlaza,
+            PuestoEmpleadoModel.instPuestoNuevoEmpleado(puesto)
         );
     }
 

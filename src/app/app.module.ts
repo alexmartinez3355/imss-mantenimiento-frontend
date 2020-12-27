@@ -17,6 +17,8 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { InicioSesionComponent } from './pages/inicio-sesion/inicio-sesion.component';
 import { OrdenServicioComponent } from './pages/orden-servicio/orden-servicio.component';
 import { RestringidoComponent } from './pages/restringido/restringido.component';
+import { NuevoEmpleadoComponent } from './pages/empleados/nuevo-empleado/nuevo-empleado.component';
+import { EditarEmpleadoComponent } from './pages/empleados/editar-empleado/editar-empleado.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { RestringidoComponent } from './pages/restringido/restringido.component'
     InicioComponent,
     InicioSesionComponent,
     OrdenServicioComponent,
-    RestringidoComponent
+    RestringidoComponent,
+    NuevoEmpleadoComponent,
+    EditarEmpleadoComponent
   ],
   imports: [
     BrowserModule,
