@@ -42,6 +42,12 @@ export class NavbarComponent implements OnInit {
         else if (event.url.includes('/empleados/editar-empleado')) {
           this.componente = '/empleados/editar empleado'.toLocaleUpperCase();
         }
+        else if (event.url.includes('/departamentos')) {
+          this.componente = '/Especialidades'.toLocaleUpperCase();
+        }
+        else if (event.url.includes('/departamentos/nueva-especialidad')) {
+          this.componente = '/Especialidades/Nueva especialidad'.toLocaleUpperCase();
+        }
         else if (event.url === '/restringido') {
           this.componente = '/error'.toLocaleUpperCase();
         }

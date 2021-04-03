@@ -1,0 +1,29 @@
+table .color-cabecera-tabla {
+    background-color: #144D38;
+    color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd){
+    background-color: #CDCDCD;
+}
+
+.table-hover tbody tr:hover{
+    background-color: #AEEBD8;
+    color: #000000;
+}
+
+input:focus, .btn-contorno:focus {
+    border-color: #28996F;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px #28996F;
+    outline: 0 none;
+}
+
+.btn-fondo {
+    border-color: #28996F !important;
+    color: #28996F !important;
+}
+
+.btn-fondo:hover {
+    background-color: #28996F !important;
+    color: white !important;
+}

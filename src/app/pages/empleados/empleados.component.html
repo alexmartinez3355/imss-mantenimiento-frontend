@@ -26,7 +26,7 @@
                             <th scope="col">Matricula</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Puesto</th>
-                            <th scope="col">Editar</th>
+                            <!-- <th scope="col">Editar</th> -->
                             <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
@@ -35,11 +35,11 @@
                             <th scope="row">{{empleado.numPlaza}}</th>
                             <td>{{empleado.getNombreCompleto()}}</td>
                             <td>{{empleado.puesto.nombrePuesto}}</td>
-                            <td>
+                            <!-- <td>
                                 <button class="btn btn-outline-info text-center btn-sm" (click)="editarEmpleado(empleado.idEmpleado)">
                                     <fa-icon [icon]="IEditar"></fa-icon>
                                 </button>
-                            </td>
+                            </td> -->
                             <td>
                                 <button class="btn btn-outline-danger text-center btn-sm" (click)="confirmarEliminarEmpleado(i)">
                                     <fa-icon [icon]="IEliminar"></fa-icon>

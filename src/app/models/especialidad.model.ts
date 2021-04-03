@@ -2,6 +2,8 @@ export class EspecialidadModel {
     idEspecialidad?: number;
     nombreEspecialidad?: string;
 
-    constructor(){
+    constructor(idEspacialidad: number, nombreEspecialidad: string){
+        this.idEspecialidad = idEspacialidad;
+        this.nombreEspecialidad = nombreEspecialidad;
     }
 }

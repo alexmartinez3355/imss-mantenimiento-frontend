@@ -24,6 +24,9 @@ export class EditarEmpleadoComponent implements OnInit {
 
   puesto: string;
 
+  indicadorRol: boolean;
+  indicadorNuevoUsuario: boolean;
+
   constructor( private activateRoute: ActivatedRoute, private empleadoS: EmpleadosService, private fb: FormBuilder, private router: Router) {
     
 
@@ -32,6 +35,8 @@ export class EditarEmpleadoComponent implements OnInit {
 
     });
     this.formularioEmpleado();
+    this.indicadorNuevoUsuario = false;
+    this.indicadorRol = true;
     
   }
 
@@ -81,7 +86,6 @@ export class EditarEmpleadoComponent implements OnInit {
     this.empleadoForm.get('sexo').setValue(this.datosEmpleado.sexo);
     this.empleadoForm.get('matricula').setValue(this.datosEmpleado.matricula);
     this.empleadoForm.get('numPlaza').setValue(this.datosEmpleado.numPlaza);
-    /* this.empleadoForm.get('puesto').setValue(this.datosEmpleado.puesto.nombrePuesto); */
   }
 
   mostrarPuestoEmpleado(empleado: EmpleadoModel): void{
@@ -93,11 +97,33 @@ export class EditarEmpleadoComponent implements OnInit {
     this.listaPuestos = this.listaPuestos.filter(puesto => puesto.nombrePuesto !== this.puesto);
   }
 
+  mostrarNuevoUsuario(): void {
+    
+    if (this.indicadorNuevoUsuario) {
+      this.empleadoForm.removeControl('datosUsuario');
+      this.indicadorNuevoUsuario = false;
+    }
+    else {
+      this.empleadoForm.addControl('datosUsuario', this.fb.group({
+        usuario: ['', Validators.required],
+        passUsuario: ['', Validators.required],
+        rol: ['', Validators.required]
+      }))
+      this.indicadorNuevoUsuario = true;
+    }
+    this.mostrarIndicadorRol();
+  }
+
+  mostrarIndicadorRol(): void {
+    this.empleadoForm.get('datosUsuario.rol').valueChanges.subscribe(datos => {
+      this.indicadorRol = false;
+    })
+  }
+
   actualizar(): void {
     if (this.empleadoForm.invalid) {
       return Object.values(this.empleadoForm.controls).forEach(control => {
         control.markAllAsTouched();
-        console.log('Marca mal un elemento');
       });
     }
   }

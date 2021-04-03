@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-orden-servicio',
@@ -8,7 +9,11 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class OrdenServicioComponent implements OnInit {
 
+  IBuscar = faSearch;
+
+
   /* ordenServicioForm: FormGroup; */
+
 
   constructor(private fb: FormBuilder) { }
 

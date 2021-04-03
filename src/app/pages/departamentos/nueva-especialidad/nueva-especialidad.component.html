@@ -1,0 +1,20 @@
+<div class="row container animated fadeIn">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="especialidadForm" (ngSubmit)="guardarEspecialidad()">
+                <div class="row mb-4">
+                    <div class="col">
+                        <input class="form-control" type="text" placeholder="Especialidad" formControlName="especialidad"
+                        [class.is-invalid]="especialidadNoValido" [class.is-valid]="especialidadValido">
+                        <span class="form-text text-danger" *ngIf="especialidadNoValido">Ingresa una especialidad</span>
+                    </div>
+                </div>
+
+                <div class="contenedor-botones">
+                    <button class="btn btn-primary" type="submit">Guardar</button>
+                    <button class="btn btn-danger" type="button" (click)="volver()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

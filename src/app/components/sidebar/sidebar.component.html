@@ -19,14 +19,14 @@
             </li>
             <li class="nav-item" routerLinkActive="active" *ngIf="generalS.usuarioActivo.rol === 'admin'">
                 <a routerLink="departamentos" class="d-block p-3 text-light">
-                    <fa-icon [icon]="IDepartamentos" size="1x" class="mr-2"></fa-icon>Departamentos
+                    <fa-icon [icon]="IDepartamentos" size="1x" class="mr-2"></fa-icon>Especialidades
                 </a>
             </li>
-            <li class="nav-item" routerLinkActive="active">
+            <!-- <li class="nav-item" routerLinkActive="active">
                 <a routerLink="configuracion" class="d-block p-3 text-light">
                     <fa-icon [icon]="IConfiguracion" size="1x" class="mr-2"></fa-icon>Configuracion
                 </a>
-            </li>
+            </li> -->
             <li class="nav-item alinear-boton" routerLinkActive="active">
                 <a type="button" class="d-block p-3 text-light" (click)="cerrarSesion()">
                     <fa-icon [icon]="ICerrarSesion" size="1x" class="mr-2"></fa-icon>Cerrar sesión

@@ -19,6 +19,7 @@ import { OrdenServicioComponent } from './pages/orden-servicio/orden-servicio.co
 import { RestringidoComponent } from './pages/restringido/restringido.component';
 import { NuevoEmpleadoComponent } from './pages/empleados/nuevo-empleado/nuevo-empleado.component';
 import { EditarEmpleadoComponent } from './pages/empleados/editar-empleado/editar-empleado.component';
+import { NuevaEspecialidadComponent } from './pages/departamentos/nueva-especialidad/nueva-especialidad.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { EditarEmpleadoComponent } from './pages/empleados/editar-empleado/edita
     OrdenServicioComponent,
     RestringidoComponent,
     NuevoEmpleadoComponent,
-    EditarEmpleadoComponent
+    EditarEmpleadoComponent,
+    NuevaEspecialidadComponent
   ],
   imports: [
     BrowserModule,
